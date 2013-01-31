@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>海贼的少年 Blog</title>
- <link href="http://username.github.com/atom.xml" rel="self"/>
- <link href="http://username.github.com"/>
- <updated>2013-01-31T17:29:28+08:00</updated>
- <id>http://username.github.com</id>
+ <link href="http://zephyrgithub.github.com/atom.xml" rel="self"/>
+ <link href="http://zephyrgithub.github.com"/>
+ <updated>2013-01-31T18:46:17+08:00</updated>
+ <id>http://zephyrgithub.github.com</id>
  <author>
    <name>海贼的少年</name>
    <email>chenxiaojian@msn.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>nihao chenxiaojian</title>
-   <link href="http://username.github.com/2013/01/29/nihao-chenxiaojian"/>
+   <link href="http://zephyrgithub.github.com/2013/01/29/nihao-chenxiaojian"/>
    <updated>2013-01-29T00:00:00+08:00</updated>
-   <id>http://username.github.com/2013/01/29/nihao-chenxiaojian</id>
+   <id>http://zephyrgithub.github.com/2013/01/29/nihao-chenxiaojian</id>
    <content type="html"></content>
  </entry>
  

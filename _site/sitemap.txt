@@ -1,12 +1,12 @@
 
-http://username.github.com/aaa.txt
-http://username.github.com/about.html
-http://username.github.com/archive.html
-http://username.github.com/atom.xml
-http://username.github.com/categories.html
-http://username.github.com/index.html
-http://username.github.com/pages.html
-http://username.github.com/sitemap.txt
-http://username.github.com/tags.html
+http://zephyrgithub.github.com/aaa.txt
+http://zephyrgithub.github.com/about.html
+http://zephyrgithub.github.com/archive.html
+http://zephyrgithub.github.com/atom.xml
+http://zephyrgithub.github.com/categories.html
+http://zephyrgithub.github.com/index.html
+http://zephyrgithub.github.com/pages.html
+http://zephyrgithub.github.com/sitemap.txt
+http://zephyrgithub.github.com/tags.html
 
-http://username.github.com/2013/01/29/nihao-chenxiaojian
+http://zephyrgithub.github.com/2013/01/29/nihao-chenxiaojian
