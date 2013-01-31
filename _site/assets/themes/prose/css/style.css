@@ -1,0 +1,391 @@
+/* ------------------------------------------
+  Typography / Basics
+---------------------------------------------*/
+html,body {
+  color: #57676e;
+  background: #e7eef2;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  line-height: 1.5em;
+}
+
+body,
+textarea,
+input { font: 13px/20px 'OpenSans', sans-serif; }
+
+a {
+  color: #434c50;
+  text-decoration: none;
+  -moz-transition: background-color 100ms linear, color 100ms linear;
+  -o-transition: background-color 100ms linear, color 100ms linear;
+  -webkit-transition: background-color 100ms linear, color 100ms linear;
+  transition: background-color 100ms linear, color 100ms linear;
+}
+a:hover {
+  color: #2e3335;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:active {
+  outline: none;
+}
+
+p > a {font-weight: 700;}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  line-height: 1.5em;
+}
+h4, h5, h6 {
+}
+
+h1 { font-size: 24px; }
+h1 small { font-size: 13px; font-weight: 400; }
+h2 {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 5px 0 5px 30px;
+}
+h2 small { font-size: 16px; font-weight: 400; }
+h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+h3 small { font-size: 14px; font-weight: 400; }
+h4 { font-size: 14px; }
+h5 { font-size: 13px; }
+h6 { font-size: 11px; font-weight: 400; }
+
+p {
+  font-size: 16px;
+  line-height: 1.5em;
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+
+/* Use border-box box model */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* ------------------------------------------
+  Globals
+---------------------------------------------*/
+
+/* Top Branding/Navigation */
+#header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0 20px;
+  height: 60px;
+  background: #e0e7eb;
+  border-bottom: 1px solid #c3ccd0;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+}
+
+#header .navigation a.title {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+#header .navigation, #footer .navigation {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  line-height: 60px;
+  overflow: visible;
+  font-size: 12px;
+  font-weight: 700;
+  height: 60px;
+  text-indent: 20px;
+}
+
+.navigation > a {
+  display: block;
+  position: relative;
+  padding: 0 20px 0 20px;
+  margin: 0px;
+  float: left;
+  text-indent: 0px;
+}
+
+.navigation a:hover {
+  background-color: #c9d1d6;
+}
+
+#main {
+  padding-top: 60px;
+  overflow:auto;
+  min-height: 400px;
+  padding-bottom: 60px; /* must be same height as the footer */
+}
+
+/* ------------------------------------------
+  Footer - a sticky one
+---------------------------------------------*/
+/* must declare 0 margins on everything, also for main layout components use padding, not
+vertical margins (top and bottom) to add spacing, else those margins get added to total height
+and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
+
+#container {
+  min-height: 100%;
+  min-width: 960px;
+}
+
+#footer {
+  position: relative;
+  margin-top: -60px; /* negative value of footer height */
+  height: 60px;
+  overflow: hidden;
+  line-height: 60px;
+  background: #e0e7eb;
+  border-top: 1px solid #c3ccd0;
+  clear:both;
+}
+
+#footer .navigation {
+  padding-left: 0;
+  text-indent: 0;
+}
+
+#footer .footer-content {
+  width: 960px;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+#footer a, #footer .brand {
+  font-size: 12px;
+  font-weight: bold;
+  font-weight: 700;
+}
+
+#footer a {
+  padding: 22px;
+}
+
+#footer ul li {
+  display: inline;
+}
+
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+  content:"";
+  height:100%;
+  float:left;
+  width:0;
+  margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+/* ------------------------------------------
+  Rendered Markdown
+---------------------------------------------*/
+
+.post-content {
+  background: #fff;
+  padding: 100px;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 400;
+  border: 1px solid #C3CCD0;
+  font-size: 16px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-content * {
+	line-height: 1.2em;
+}
+
+.post-content p, .post-content ul, .post-content ol,  .post-content li {
+	line-height: 1.5em;
+}
+
+.post-content .title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid #d5e0e4;
+  padding-bottom: 20px;
+}
+
+.post-content h1 { font-size: 36px; margin: 10px 0 20px 0; }
+.post-content h2 { font-size: 24px; margin: 10px 0 20px 0; font-weight: 700; padding: 0; }
+.post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+  text-transform: none;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0 5px 0;
+}
+
+.post-content blockquote {
+	padding-left: 19px;
+  border-left: 1px solid #d5e0e4;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.post-content ul {
+  margin-left: 0px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.post-content ol {
+  margin-left: 0px;
+  padding-left: 20px;
+  list-style: decimal;
+}
+
+.post-content img {
+  max-width: 780px;
+}
+
+.post-content .meta {
+  margin-top: 30px;
+  padding-top: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-top: 1px solid #d5e0e4;
+}
+
+.post-content a {
+  color: #90BB74;
+}
+.post-content a:hover {
+  color: #73955C;
+}
+
+.post-content p {
+  margin-bottom: 20px;
+}
+
+.post-content p:last-child {
+  margin-bottom: 20px;
+}
+
+.post-content code {
+  font-family: Menlo, monospace;
+  padding: 4px;
+  margin: 0 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  border: 1px solid #d5e0e4;
+}
+
+.post-content pre {
+  overflow: auto;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #d5e0e4;
+  word-wrap: normal
+}
+
+.post-content pre code {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-content hr {
+  margin: 5px 0 19px 0;
+  border: 0;
+  border-top: 1px solid #d5e0e4;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.post-content {
+  width: 960px;
+  margin: 20px auto;
+}
+
+.improve-article-wrapper a.button {
+  width: 100px;
+  float: left;
+  color: rgba(255,255,255, 0.8);
+  display: block;
+  line-height: 1.5em;
+
+  /*margin: 30px 250px;*/
+  padding: 20px 0;
+  background: rgba(0,0,0, 0.7);
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.improve-article-wrapper a.button:hover {
+  background: rgba(0,0,0, 0.8);
+  color: rgba(255,255,255, 1);
+}
+
+.improve-article-wrapper {
+  font-size: 20px;
+  padding: 20px 0;
+  /*border-top: 1px solid #CCC;*/
+  background: rgba(255,255, 255, 0.6);
+
+  width: 960px;
+  margin: -20px auto 20px;
+  border: 1px solid #C3CCD0;
+  border-top: none;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.improve-article {
+  overflow: auto;
+  width: 800px;
+  margin: 20px auto;
+}
+
+.improve-article p {
+  padding-top: 13px;
+  margin-left: 130px;
+}
+
+/* ------------------------------------------
+  Class Helpers
+---------------------------------------------*/
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html .clearfix { height: 1%; } /* IE6 */
+*:first-child + html .clearfix { min-height: 1%; } /* IE7 */
+
+.icon {
+  background: transparent url(images/icons.png) no-repeat 0 0;
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-indent: -999em;
+}
+.fl { float: left; }
+.fr { float: right; }
+.clear { clear: both; }
+
+.inner      { padding: 0px 0px 0px; }
+.hidden     { display: none; }
+.centered   { text-align: center; }
+.scrolling  { overflow: auto; }
+.clipping   { overflow: hidden; }

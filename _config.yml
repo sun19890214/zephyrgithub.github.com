@@ -9,14 +9,14 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : chenxiaojian Blog
+title : 海贼的少年 Blog
 tagline: Site Tagline
 author :
-  name : xiaojian chen
+  name : 海贼的少年
   email : chenxiaojian@msn.com
   github : zephyrgithub
-  twitter : username
-  feedburner : feedname
+  twitter : 
+  feedburner : 
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -79,7 +79,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : custom
+    provider : disqus
     disqus :
       short_name : jekyllbootstrap
     livefyre :

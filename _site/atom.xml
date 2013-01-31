@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>chenxiaojian Blog</title>
+ <title>海贼的少年 Blog</title>
  <link href="http://username.github.com/atom.xml" rel="self"/>
  <link href="http://username.github.com"/>
- <updated>2013-01-29T17:22:57+08:00</updated>
+ <updated>2013-01-31T16:55:30+08:00</updated>
  <id>http://username.github.com</id>
  <author>
-   <name>xiaojian chen</name>
+   <name>海贼的少年</name>
    <email>chenxiaojian@msn.com</email>
  </author>
 

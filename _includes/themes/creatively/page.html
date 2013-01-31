@@ -1,0 +1,16 @@
+<div class="content">
+    <div id="post">
+        {% if page.title %}
+            <h1>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </h1>
+            
+            <div class="authoring">
+                {{ page.date | date: "%B %e, %Y" }}
+            </div>
+        {% endif %}
+
+        {{ content }}
+    </div>
+
+    {% include JB/comments %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Sctict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>{{ page.title }}</title>
+    <meta name="author" content="Kevin Sornberger"/>
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/styles.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="me">
+                <a href="/" class="first-name">海贼的少年</a>
+                <!--<a href="/" class="last-name">Bighi</a>-->
+            </div>
+
+            <div id="mousing">&nbsp;</div>
+            <div class="site"></div>
+
+            <div id="sections">
+                <div><a href="/about.html">About</a></div>
+            </div>
+
+            <div id="icons">
+                <div class="side-rss">
+                    <a href="/atom.xml"><img src="{{ASSET_PATH}}/images/rss.png"></a>
+                </div>
+
+                <div class="side-github">
+                    <a href="http://www.github.com/zephyrGithub"><img src="{{ASSET_PATH}}/images/icon_github.png" /></a>
+                </div>
+
+                <div class="side-twitter">
+                    <a href="http://www.twitter.com/"><img src="{{ASSET_PATH}}/images/icon_twitter.jpg" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="body-header">
+            <p></p>
+        </div>
+
+        {{ content }}
+    </div>
+</body>
+</html>
