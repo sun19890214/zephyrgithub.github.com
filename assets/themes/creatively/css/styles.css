@@ -20,12 +20,25 @@ a:hover{
 }
 
 p code, li code{
-	background-color: #F9F9F9;
-	border: 1px solid #eee;
-	font-size: 12px;
-	padding: 2px 3px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: whiteSmoke;
+    border: 1px solid #CCC;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border:1px solid #ccc ;
+    padding:10px;
+    background-color:#eee;
+
 }
 hr{
 	border: 0;
@@ -155,6 +168,15 @@ h1{
   color: #ccc;
 }
 
+#header #archive{
+    text-align: center;
+    margin-top: 80px;
+    margin-top: 40px;
+    border-bottom-width: 40px;
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 7px;
+}
 
 
 #post{
@@ -235,4 +257,12 @@ h1{
 #body-header p {
 	margin-top: 5px;
 	font-family: Helvetica, sans-serif;
+}
+
+#base_info p {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+}
+#base_info ul li {
+    style-type:none;
 }

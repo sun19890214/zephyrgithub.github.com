@@ -1,0 +1,98 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Sctict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>maven使用出现的问题</title>
+    <meta name="author" content="Kevin Sornberger"/>
+    <link rel="stylesheet" href="/assets/themes/creatively/css/styles.css"/>
+</head>
+
+<body>
+<div id="container">
+    <div id="header">
+        <div id="me">
+            <a href="/" class="first-name">海贼的少年</a>
+            <!--<a href="/" class="last-name">Bighi</a>-->
+        </div>
+
+        <div id="mousing">&nbsp;</div>
+        <div class="site"></div>
+
+
+        <div id="archive">
+            <div><a href="/archive.html">存档</a></div>
+            <div style="padding-bottom: 16px;"></div>
+            <div><a href="/categories.html">分类</a></div>
+        </div>
+
+        <div id="icons">
+            <div class="side-rss">
+                <a href="/atom.xml"><img src="/assets/themes/creatively/images/rss.png"></a>
+            </div>
+
+            <div class="side-github">
+                <a href="http://www.github.com/zephyrGithub"><img src="/assets/themes/creatively/images/icon_github.png"/></a>
+            </div>
+
+            <div class="side-twitter">
+                <a href="http://www.weibo.com/niubijian"><img src="/assets/themes/creatively/images/icon_weibo.png"/></a>
+            </div>
+        </div>
+
+        <div id="sections">
+            <div><a href="/about.html">About</a></div>
+        </div>
+    </div>
+
+    <div id="body-header">
+        <p></p>
+    </div>
+
+    
+<div class="content">
+  <div id="post">
+    <h1>
+        <a href="/2012/03/10/maven%E4%BD%BF%E7%94%A8%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98">maven使用出现的问题</a>
+    </h1>
+
+    <div class="authoring">
+        March 10, 2012
+    </div>
+
+    <p>Q：maven deploy return code 413</p>
+
+<p>A： <div><p><code>
+修改jetty提交form表单大小配置：
+-Dorg.mortbay.jetty.Request.maxFormContentSize=5000000
+另一种可能是：
+maven私服可能配置了nginx，限制了接收提交文件的大小
+</code></p></div></p>
+
+<p>Q：maven install失败 <div><p><code>
+[ERROR] Failed to execute goal on project open-t-oauth2:
+Could not resolve dependencies for project open-t-oauth2:open-t-oauth2:war:0.0.1:
+Failed to collect dependencies for [com.sohu.twitter:sohutw-service-core:jar:1.0.1-SNAPSHOT (compile),
+com.sohu.twitter:sohutw-ginkgo-core:jar:1.2.5 (compile),
+com.sohu.twitter:sohutw-ginkgo-default-config:jar:1.0.5 (compile),
+com.sohu.twitter:sohutw-ginkgo-monitor:jar:1.0.6 (compile),
+org.apache.amber:amber-oauth2-authzserver:jar:0.31-incubating-SNAPSHOT (compile)...
+</code></p></div></p>
+
+<p>A：在打包服务器mvn install失败，最后更了amber的版本解决</p>
+  </div>
+
+
+
+
+  
+
+
+
+
+
+</div>
+</body>
+</html>
+

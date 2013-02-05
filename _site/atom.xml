@@ -4,7 +4,7 @@
  <title>海贼的少年 Blog</title>
  <link href="http://zephyrgithub.github.com/atom.xml" rel="self"/>
  <link href="http://zephyrgithub.github.com"/>
- <updated>2013-01-31T18:46:17+08:00</updated>
+ <updated>2013-02-05T19:33:07+08:00</updated>
  <id>http://zephyrgithub.github.com</id>
  <author>
    <name>海贼的少年</name>
@@ -13,11 +13,242 @@
 
  
  <entry>
-   <title>nihao chenxiaojian</title>
-   <link href="http://zephyrgithub.github.com/2013/01/29/nihao-chenxiaojian"/>
-   <updated>2013-01-29T00:00:00+08:00</updated>
-   <id>http://zephyrgithub.github.com/2013/01/29/nihao-chenxiaojian</id>
-   <content type="html"></content>
+   <title>运维常用linux命令</title>
+   <link href="http://zephyrgithub.github.com/2012/03/10/%E8%BF%90%E7%BB%B4%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4"/>
+   <updated>2012-03-10T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/03/10/运维常用Linux命令</id>
+   <content type="html">&lt;h20&gt;jvm&lt;/h20&gt;
+
+&lt;p&gt;查看线程数： &lt;p&gt;&lt;code&gt;
+ps -eLf|grep resin |grep -v grep|wc -l
+&lt;/code&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;查看堆内存状态： &lt;div&gt;&lt;p&gt;&lt;code&gt;
+jmap -heap pid
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;查看gc情况： &lt;div&gt;&lt;p&gt;&lt;code&gt;
+jstat -gc 31169
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt; &lt;div&gt;&lt;p&gt;&lt;code&gt;
+jstat -gcutil 31169 取样间隔时间(ms) 取样次数
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt; &lt;div&gt;&lt;p&gt;&lt;code&gt;
+gc一般不是每几分钟做一次full gc的话就算正常，我的服务上了一周full gc 142次，
+总共full gc时间44.476s
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h20&gt;网络&lt;/h20&gt;
+
+&lt;p&gt;查看端口使用： &lt;div&gt;&lt;p&gt;&lt;code&gt;
+netstat -ntlp |grep 2245
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;查看端口连接情况： &lt;div&gt;&lt;p&gt;&lt;code&gt;
+netstat -an |grep 2245
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;查看端口占用的pid： &lt;div&gt;&lt;p&gt;&lt;code&gt;
+lsof -i:8080
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h20&gt;日志&lt;/h20&gt;
+
+&lt;p&gt;查看日志的前、后n行：&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;&lt;code&gt;
+grep -An &quot;keyword&quot; filename
+
+grep -Bn &quot;keyword&quot; filename
+
+grep -Cn &quot;keyword&quot; filename
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;查看日志排除某个字符串 &lt;div&gt;&lt;p&gt;&lt;code&gt;
+grep -V
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;查看文件中包含特定字符串： &lt;div&gt;&lt;p&gt;&lt;code&gt;
+find 目录 -type f | xargs grep &quot;特定字符串 &quot;
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;日志分析 &lt;div&gt;&lt;p&gt;&lt;code&gt;
+cat update_all.log |awk ' $16 != 200 {print $16}'|wc -l
+cat key.log |sort |uniq -c|sort -n
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h20&gt;用户&lt;/h20&gt;
+
+&lt;p&gt;查看有哪些用户： &lt;div&gt;&lt;p&gt;&lt;code&gt;
+cat /etc/passwd |awk -F: '{print $1}'
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>开放平台的微博经常出现重复的问题</title>
+   <link href="http://zephyrgithub.github.com/2012/03/10/%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%BE%AE%E5%8D%9A%E7%BB%8F%E5%B8%B8%E5%87%BA%E7%8E%B0%E9%87%8D%E5%A4%8D%E7%9A%84%E9%97%AE%E9%A2%98"/>
+   <updated>2012-03-10T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/03/10/开放平台的微博经常出现重复的问题</id>
+   <content type="html">&lt;p&gt;今天发现不少用户从open api过来的微博有重复，终于找到了原因，猜测了一下导致微博重复的流程：&lt;/p&gt;
+
+&lt;p&gt;1、用户发一条微博&lt;/p&gt;
+
+&lt;p&gt;2、服务器处理这条微博，代码处理了发微博的逻辑之后抛了异常，后面代码未执行完，返回501&lt;/p&gt;
+
+&lt;p&gt;3、用户（应该是某个程序或者微博工具）发现服务器端返回非200，又发了一遍上条微博&lt;/p&gt;
+
+&lt;p&gt;造成重复微博的出现&lt;/p&gt;
+
+&lt;p&gt;类似错误半天多就产生了 2 573条&lt;/p&gt;
+
+&lt;p&gt;悲剧的是log打出来的e.getMessage() 为null，上面try块比较大，而且所调用的方法有许多是申明了抛异常的&amp;#8230;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>resin远程debug配置</title>
+   <link href="http://zephyrgithub.github.com/2012/03/10/resin%E8%BF%9C%E7%A8%8Bdebug%E9%85%8D%E7%BD%AE"/>
+   <updated>2012-03-10T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/03/10/resin远程debug配置</id>
+   <content type="html">&lt;p&gt;修改/resin/conf/resin.conf 追加 &lt;div&gt;&lt;p&gt;&lt;code&gt;
+ jvm-arg  -Xdebug  /jvm-arg
+ jvm-arg  -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=9090  /jvm-arg
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>resin3.1之前旧版本问题</title>
+   <link href="http://zephyrgithub.github.com/2012/03/10/resin3.1%E4%B9%8B%E5%89%8D%E6%97%A7%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"/>
+   <updated>2012-03-10T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/03/10/resin3.1之前旧版本问题</id>
+   <content type="html">&lt;p&gt;1、无法在resin.conf中配置jvm参数，只能传jvm参数了-Xmx3072m -Xms3072m&lt;/p&gt;
+
+&lt;p&gt;2、无法设置jvm内存为4G，因为不支持那么大，3G是可以的&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>nginx使用问题</title>
+   <link href="http://zephyrgithub.github.com/2012/03/10/nginx%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98"/>
+   <updated>2012-03-10T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/03/10/nginx使用问题</id>
+   <content type="html">&lt;p&gt;1、更改nginx配置增加ssl，-s reload无效，使用killall后重启生效&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>mongodb的配置参数</title>
+   <link href="http://zephyrgithub.github.com/2012/03/10/mongodb%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0"/>
+   <updated>2012-03-10T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/03/10/mongodb的配置参数</id>
+   <content type="html">&lt;div&gt;&lt;p&gt;&lt;code&gt;
+--dbpath
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;指定数据目录；默认是/data/db/。每个mongod进程都需要独立的数据目录，所以要是有3个mongod实例，必须要有3个独立的数据目录。当mongod启动时，会在数据目录中创建mongod.lock文件，这个文件用于防止其他mongd进程使用该数据目录。如果使用同一个数据目录启动另一个MongoDB服务器，则会报错：&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;&lt;code&gt;
+&quot;Unable to acquire lock for lockfilepath: data/db/mongod.lock.&quot;
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;code&gt;
+--port
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;指定服务器监听的端口号。默认是27017，是个其他进程不怎么用的端口。要是运行多个mongod进程，则要给每个指定不同的端口号。如果启动mongod时端口被占用，则报错：&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;&lt;code&gt;
+&quot;Address already in use for socket: 0.0.0.0:27017&quot;
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;code&gt;
+--logpath
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;指定日志输出路径，系统会在文件不存在时创建它，它会将已有文件覆盖掉，清楚所有原来的日志记录。如果想保留原来的日志，还需要使用&amp;#8211;logappend选项。&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;&lt;code&gt;
+--config
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;指定配置文件，家在命令行未指定的各种选项。&lt;/p&gt;
+
+&lt;p&gt;停止MongoDB&lt;/p&gt;
+
+&lt;p&gt;命令： &lt;div&gt;&lt;p&gt;&lt;code&gt;
+kill -2 pid (SIGINT)
+kill pid (SIGTERM)
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt; 千万不要SIGKILL (kill -9)，这样会导致数据库直接关闭，数据文件损毁，要是真的发生了不幸，一定要在启动备份之前修复数据库。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>maven使用出现的问题</title>
+   <link href="http://zephyrgithub.github.com/2012/03/10/maven%E4%BD%BF%E7%94%A8%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"/>
+   <updated>2012-03-10T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/03/10/maven使用出现的问题</id>
+   <content type="html">&lt;p&gt;Q：maven deploy return code 413&lt;/p&gt;
+
+&lt;p&gt;A： &lt;div&gt;&lt;p&gt;&lt;code&gt;
+修改jetty提交form表单大小配置：
+-Dorg.mortbay.jetty.Request.maxFormContentSize=5000000
+另一种可能是：
+maven私服可能配置了nginx，限制了接收提交文件的大小
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Q：maven install失败 &lt;div&gt;&lt;p&gt;&lt;code&gt;
+[ERROR] Failed to execute goal on project open-t-oauth2:
+Could not resolve dependencies for project open-t-oauth2:open-t-oauth2:war:0.0.1:
+Failed to collect dependencies for [com.sohu.twitter:sohutw-service-core:jar:1.0.1-SNAPSHOT (compile),
+com.sohu.twitter:sohutw-ginkgo-core:jar:1.2.5 (compile),
+com.sohu.twitter:sohutw-ginkgo-default-config:jar:1.0.5 (compile),
+com.sohu.twitter:sohutw-ginkgo-monitor:jar:1.0.6 (compile),
+org.apache.amber:amber-oauth2-authzserver:jar:0.31-incubating-SNAPSHOT (compile)...
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;A：在打包服务器mvn install失败，最后更了amber的版本解决&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>OAuth2.0更新并上传了Java版的SDK</title>
+   <link href="http://zephyrgithub.github.com/2012/03/10/OAuth2.0%E6%9B%B4%E6%96%B0%E5%B9%B6%E4%B8%8A%E4%BC%A0%E4%BA%86Java%E7%89%88%E7%9A%84SDK"/>
+   <updated>2012-03-10T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/03/10/OAuth2.0更新并上传了Java版的SDK</id>
+   <content type="html">&lt;p&gt;SDK传到github上了： &lt;div&gt;&lt;p&gt;&lt;code&gt;
+https://github.com/zephyrGithub/zephyrgithub.github.com
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;用twitter4J改了改，暂时没有实现返回集合接口的分页&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>IDEA使用配置</title>
+   <link href="http://zephyrgithub.github.com/2012/03/10/IDEA%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE"/>
+   <updated>2012-03-10T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/03/10/IDEA使用配置</id>
+   <content type="html">&lt;p&gt;Q：IDEA运行main方法之前不重新编译java文件&lt;/p&gt;
+
+&lt;p&gt;A：在设置中的before launch 一定要勾选去掉make 去掉make 魂淡啊~&lt;/p&gt;
+
+&lt;p&gt;ps：设置maven的jvm你内存 &lt;div&gt;&lt;p&gt;&lt;code&gt;
+MAVEN_OPTS=-Xms512m -Xmx512m
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>HttpClient默认配置导致线程阻塞问题</title>
+   <link href="http://zephyrgithub.github.com/2012/03/10/HttpClient%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%87%B4%E7%BA%BF%E7%A8%8B%E9%98%BB%E5%A1%9E%E9%97%AE%E9%A2%98"/>
+   <updated>2012-03-10T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/03/10/HttpClient默认配置导致线程阻塞问题</id>
+   <content type="html">&lt;p&gt;大哥让我把所有走开放平台和内部API的上传带图微博那块，由原来直接引用外域图片url，改为自己重新上传一份生成新的url， 这块功能上线后机器隔一段时间就报警了，我用jstack看了一下，发现许多线程阻塞在图片下载那块，可能是 httpClient的线程池不够用导致的，修改为以下配置，暂时没有问题。&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;&lt;code&gt;
+private static MultiThreadedHttpConnectionManager connectionManager = new MultiThreadedHttpConnectionManager();
+private static final int TIMEOUT = 3 * 1000;
+private static final int MAX_HTTP_CONNECTION = 200;
+private static final int MAX_CONNECTION_PER_HOST = 50;
+
+static {
+//HttpClient 连接池属性设置，HOST并发数默认为50, 客户端总并发数为200, TimeOut时间为3s.
+HttpConnectionManagerParams httpConnectionManagerParams = new HttpConnectionManagerParams();
+httpConnectionManagerParams.setMaxTotalConnections(MAX_HTTP_CONNECTION);
+httpConnectionManagerParams.setDefaultMaxConnectionsPerHost(MAX_CONNECTION_PER_HOST);
+httpConnectionManagerParams.setSoTimeout(TIMEOUT);
+httpConnectionManagerParams.setConnectionTimeout(TIMEOUT);
+connectionManager.setParams(httpConnectionManagerParams);
+}
+
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;如果不做设置，默认的线程池设置是这样的：&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;&lt;code&gt;
+/** The default maximum number of connections allowed per host */
+
+public static final int DEFAULT_MAX_HOST_CONNECTIONS = 2;
+
+/** The default maximum number of connections allowed overall */
+
+public static final int DEFAULT_MAX_TOTAL_CONNECTIONS = 20;
+&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</content>
  </entry>
  
  

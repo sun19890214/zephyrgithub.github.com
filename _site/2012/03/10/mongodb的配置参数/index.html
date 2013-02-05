@@ -1,0 +1,105 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Sctict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>mongodb的配置参数</title>
+    <meta name="author" content="Kevin Sornberger"/>
+    <link rel="stylesheet" href="/assets/themes/creatively/css/styles.css"/>
+</head>
+
+<body>
+<div id="container">
+    <div id="header">
+        <div id="me">
+            <a href="/" class="first-name">海贼的少年</a>
+            <!--<a href="/" class="last-name">Bighi</a>-->
+        </div>
+
+        <div id="mousing">&nbsp;</div>
+        <div class="site"></div>
+
+
+        <div id="archive">
+            <div><a href="/archive.html">存档</a></div>
+            <div style="padding-bottom: 16px;"></div>
+            <div><a href="/categories.html">分类</a></div>
+        </div>
+
+        <div id="icons">
+            <div class="side-rss">
+                <a href="/atom.xml"><img src="/assets/themes/creatively/images/rss.png"></a>
+            </div>
+
+            <div class="side-github">
+                <a href="http://www.github.com/zephyrGithub"><img src="/assets/themes/creatively/images/icon_github.png"/></a>
+            </div>
+
+            <div class="side-twitter">
+                <a href="http://www.weibo.com/niubijian"><img src="/assets/themes/creatively/images/icon_weibo.png"/></a>
+            </div>
+        </div>
+
+        <div id="sections">
+            <div><a href="/about.html">About</a></div>
+        </div>
+    </div>
+
+    <div id="body-header">
+        <p></p>
+    </div>
+
+    
+<div class="content">
+  <div id="post">
+    <h1>
+        <a href="/2012/03/10/mongodb%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0">mongodb的配置参数</a>
+    </h1>
+
+    <div class="authoring">
+        March 10, 2012
+    </div>
+
+    <div><p><code>
+--dbpath
+</code></p></div>
+<p>指定数据目录；默认是/data/db/。每个mongod进程都需要独立的数据目录，所以要是有3个mongod实例，必须要有3个独立的数据目录。当mongod启动时，会在数据目录中创建mongod.lock文件，这个文件用于防止其他mongd进程使用该数据目录。如果使用同一个数据目录启动另一个MongoDB服务器，则会报错：</p>
+<div><p><code>
+"Unable to acquire lock for lockfilepath: data/db/mongod.lock."
+</code></p></div><div><p><code>
+--port
+</code></p></div>
+<p>指定服务器监听的端口号。默认是27017，是个其他进程不怎么用的端口。要是运行多个mongod进程，则要给每个指定不同的端口号。如果启动mongod时端口被占用，则报错：</p>
+<div><p><code>
+"Address already in use for socket: 0.0.0.0:27017"
+</code></p></div><div><p><code>
+--logpath
+</code></p></div>
+<p>指定日志输出路径，系统会在文件不存在时创建它，它会将已有文件覆盖掉，清楚所有原来的日志记录。如果想保留原来的日志，还需要使用&#8211;logappend选项。</p>
+<div><p><code>
+--config
+</code></p></div>
+<p>指定配置文件，家在命令行未指定的各种选项。</p>
+
+<p>停止MongoDB</p>
+
+<p>命令： <div><p><code>
+kill -2 pid (SIGINT)
+kill pid (SIGTERM)
+</code></p></div> 千万不要SIGKILL (kill -9)，这样会导致数据库直接关闭，数据文件损毁，要是真的发生了不幸，一定要在启动备份之前修复数据库。</p>
+  </div>
+
+
+
+
+  
+
+
+
+
+
+</div>
+</body>
+</html>
+
