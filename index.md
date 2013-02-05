@@ -7,7 +7,6 @@ tagline: Supporting tagline
 
 
 
-
 最近发表的文章：
 
 <ul class="posts">

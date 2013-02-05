@@ -4,7 +4,7 @@
  <title>海贼的少年 Blog</title>
  <link href="http://zephyrgithub.github.com/atom.xml" rel="self"/>
  <link href="http://zephyrgithub.github.com"/>
- <updated>2013-02-05T21:25:38+08:00</updated>
+ <updated>2013-02-05T21:41:35+08:00</updated>
  <id>http://zephyrgithub.github.com</id>
  <author>
    <name>海贼的少年</name>
@@ -203,10 +203,10 @@ https://github.com/zephyrGithub/zephyrgithub.github.com
  </entry>
  
  <entry>
-   <title>Idea使用配置</title>
-   <link href="http://zephyrgithub.github.com/2012/03/10/IDEA%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE"/>
+   <title>IDEA使用配置</title>
+   <link href="http://zephyrgithub.github.com/%E5%B7%A5%E5%85%B7/2012/03/10/IDEA%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE"/>
    <updated>2012-03-10T00:00:00+08:00</updated>
-   <id>http://zephyrgithub.github.com/2012/03/10/IDEA使用配置</id>
+   <id>http://zephyrgithub.github.com/%E5%B7%A5%E5%85%B7/2012/03/10/IDEA使用配置</id>
    <content type="html">&lt;p&gt;Q：IDEA运行main方法之前不重新编译java文件&lt;/p&gt;
 
 &lt;p&gt;A：在设置中的before launch 一定要勾选去掉make 去掉make 魂淡啊~&lt;/p&gt;
