@@ -2,8 +2,8 @@
 layout: post
 title: "HttpClient默认配置导致线程阻塞问题"
 description: ""
-category:
-tags: []
+category: 语言
+tags: java
 ---
 {% include JB/setup %}
 

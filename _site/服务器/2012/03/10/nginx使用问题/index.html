@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>resin3.1之前旧版本问题</title>
+    <title>nginx使用问题</title>
     <meta name="author" content="Kevin Sornberger"/>
     <link rel="stylesheet" href="/assets/themes/creatively/css/styles.css"/>
 </head>
@@ -23,8 +23,10 @@
 
         <div id="archive">
             <div><a href="/archive.html">存档</a></div>
-            <div style="padding-bottom: 16px;"></div>
+            <div style="padding-bottom: 6px;"></div>
             <div><a href="/categories.html">分类</a></div>
+            <div style="padding-bottom: 6px;"></div>
+            <div><a href="/tags.html">Tag</a></div>
         </div>
 
         <div id="icons">
@@ -54,16 +56,14 @@
 <div class="content">
   <div id="post">
     <h1>
-        <a href="/2012/03/10/resin3.1%E4%B9%8B%E5%89%8D%E6%97%A7%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98">resin3.1之前旧版本问题</a>
+        <a href="/%E6%9C%8D%E5%8A%A1%E5%99%A8/2012/03/10/nginx%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98">nginx使用问题</a>
     </h1>
 
     <div class="authoring">
         March 10, 2012
     </div>
 
-    <p>1、无法在resin.conf中配置jvm参数，只能传jvm参数了-Xmx3072m -Xms3072m</p>
-
-<p>2、无法设置jvm内存为4G，因为不支持那么大，3G是可以的</p>
+    <p>1、更改nginx配置增加ssl，-s reload无效，使用killall后重启生效</p>
   </div>
 
 

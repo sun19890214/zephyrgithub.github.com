@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : 海贼的少年 Blog
-tagline: Site Tagline
+tagline: [java , python , cloud computing , node.js , mobile app , apple , jetty ,]
 author :
   name : 海贼的少年
   email : chenxiaojian@msn.com

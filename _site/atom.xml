@@ -4,7 +4,7 @@
  <title>海贼的少年 Blog</title>
  <link href="http://zephyrgithub.github.com/atom.xml" rel="self"/>
  <link href="http://zephyrgithub.github.com"/>
- <updated>2013-02-05T19:33:07+08:00</updated>
+ <updated>2013-02-05T21:25:38+08:00</updated>
  <id>http://zephyrgithub.github.com</id>
  <author>
    <name>海贼的少年</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>运维常用linux命令</title>
-   <link href="http://zephyrgithub.github.com/2012/03/10/%E8%BF%90%E7%BB%B4%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4"/>
+   <link href="http://zephyrgithub.github.com/%E5%B7%A5%E5%85%B7/2012/03/10/%E8%BF%90%E7%BB%B4%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4"/>
    <updated>2012-03-10T00:00:00+08:00</updated>
-   <id>http://zephyrgithub.github.com/2012/03/10/运维常用Linux命令</id>
+   <id>http://zephyrgithub.github.com/%E5%B7%A5%E5%85%B7/2012/03/10/运维常用Linux命令</id>
    <content type="html">&lt;h20&gt;jvm&lt;/h20&gt;
 
 &lt;p&gt;查看线程数： &lt;p&gt;&lt;code&gt;
@@ -102,9 +102,9 @@ cat /etc/passwd |awk -F: '{print $1}'
  
  <entry>
    <title>resin远程debug配置</title>
-   <link href="http://zephyrgithub.github.com/2012/03/10/resin%E8%BF%9C%E7%A8%8Bdebug%E9%85%8D%E7%BD%AE"/>
+   <link href="http://zephyrgithub.github.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/2012/03/10/resin%E8%BF%9C%E7%A8%8Bdebug%E9%85%8D%E7%BD%AE"/>
    <updated>2012-03-10T00:00:00+08:00</updated>
-   <id>http://zephyrgithub.github.com/2012/03/10/resin远程debug配置</id>
+   <id>http://zephyrgithub.github.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/2012/03/10/resin远程debug配置</id>
    <content type="html">&lt;p&gt;修改/resin/conf/resin.conf 追加 &lt;div&gt;&lt;p&gt;&lt;code&gt;
  jvm-arg  -Xdebug  /jvm-arg
  jvm-arg  -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=9090  /jvm-arg
@@ -113,9 +113,9 @@ cat /etc/passwd |awk -F: '{print $1}'
  
  <entry>
    <title>resin3.1之前旧版本问题</title>
-   <link href="http://zephyrgithub.github.com/2012/03/10/resin3.1%E4%B9%8B%E5%89%8D%E6%97%A7%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"/>
+   <link href="http://zephyrgithub.github.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/2012/03/10/resin3.1%E4%B9%8B%E5%89%8D%E6%97%A7%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"/>
    <updated>2012-03-10T00:00:00+08:00</updated>
-   <id>http://zephyrgithub.github.com/2012/03/10/resin3.1之前旧版本问题</id>
+   <id>http://zephyrgithub.github.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/2012/03/10/resin3.1之前旧版本问题</id>
    <content type="html">&lt;p&gt;1、无法在resin.conf中配置jvm参数，只能传jvm参数了-Xmx3072m -Xms3072m&lt;/p&gt;
 
 &lt;p&gt;2、无法设置jvm内存为4G，因为不支持那么大，3G是可以的&lt;/p&gt;</content>
@@ -123,17 +123,17 @@ cat /etc/passwd |awk -F: '{print $1}'
  
  <entry>
    <title>nginx使用问题</title>
-   <link href="http://zephyrgithub.github.com/2012/03/10/nginx%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98"/>
+   <link href="http://zephyrgithub.github.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/2012/03/10/nginx%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98"/>
    <updated>2012-03-10T00:00:00+08:00</updated>
-   <id>http://zephyrgithub.github.com/2012/03/10/nginx使用问题</id>
+   <id>http://zephyrgithub.github.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/2012/03/10/nginx使用问题</id>
    <content type="html">&lt;p&gt;1、更改nginx配置增加ssl，-s reload无效，使用killall后重启生效&lt;/p&gt;</content>
  </entry>
  
  <entry>
    <title>mongodb的配置参数</title>
-   <link href="http://zephyrgithub.github.com/2012/03/10/mongodb%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0"/>
+   <link href="http://zephyrgithub.github.com/DB/2012/03/10/mongodb%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0"/>
    <updated>2012-03-10T00:00:00+08:00</updated>
-   <id>http://zephyrgithub.github.com/2012/03/10/mongodb的配置参数</id>
+   <id>http://zephyrgithub.github.com/DB/2012/03/10/mongodb的配置参数</id>
    <content type="html">&lt;div&gt;&lt;p&gt;&lt;code&gt;
 --dbpath
 &lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
@@ -165,9 +165,9 @@ kill pid (SIGTERM)
  
  <entry>
    <title>maven使用出现的问题</title>
-   <link href="http://zephyrgithub.github.com/2012/03/10/maven%E4%BD%BF%E7%94%A8%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"/>
+   <link href="http://zephyrgithub.github.com/%E5%B7%A5%E5%85%B7/2012/03/10/maven%E4%BD%BF%E7%94%A8%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"/>
    <updated>2012-03-10T00:00:00+08:00</updated>
-   <id>http://zephyrgithub.github.com/2012/03/10/maven使用出现的问题</id>
+   <id>http://zephyrgithub.github.com/%E5%B7%A5%E5%85%B7/2012/03/10/maven使用出现的问题</id>
    <content type="html">&lt;p&gt;Q：maven deploy return code 413&lt;/p&gt;
 
 &lt;p&gt;A： &lt;div&gt;&lt;p&gt;&lt;code&gt;
@@ -203,7 +203,7 @@ https://github.com/zephyrGithub/zephyrgithub.github.com
  </entry>
  
  <entry>
-   <title>IDEA使用配置</title>
+   <title>Idea使用配置</title>
    <link href="http://zephyrgithub.github.com/2012/03/10/IDEA%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE"/>
    <updated>2012-03-10T00:00:00+08:00</updated>
    <id>http://zephyrgithub.github.com/2012/03/10/IDEA使用配置</id>
@@ -218,9 +218,9 @@ MAVEN_OPTS=-Xms512m -Xmx512m
  
  <entry>
    <title>HttpClient默认配置导致线程阻塞问题</title>
-   <link href="http://zephyrgithub.github.com/2012/03/10/HttpClient%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%87%B4%E7%BA%BF%E7%A8%8B%E9%98%BB%E5%A1%9E%E9%97%AE%E9%A2%98"/>
+   <link href="http://zephyrgithub.github.com/%E8%AF%AD%E8%A8%80/2012/03/10/HttpClient%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E5%AF%BC%E8%87%B4%E7%BA%BF%E7%A8%8B%E9%98%BB%E5%A1%9E%E9%97%AE%E9%A2%98"/>
    <updated>2012-03-10T00:00:00+08:00</updated>
-   <id>http://zephyrgithub.github.com/2012/03/10/HttpClient默认配置导致线程阻塞问题</id>
+   <id>http://zephyrgithub.github.com/%E8%AF%AD%E8%A8%80/2012/03/10/HttpClient默认配置导致线程阻塞问题</id>
    <content type="html">&lt;p&gt;大哥让我把所有走开放平台和内部API的上传带图微博那块，由原来直接引用外域图片url，改为自己重新上传一份生成新的url， 这块功能上线后机器隔一段时间就报警了，我用jstack看了一下，发现许多线程阻塞在图片下载那块，可能是 httpClient的线程池不够用导致的，修改为以下配置，暂时没有问题。&lt;/p&gt;
 &lt;div&gt;&lt;p&gt;&lt;code&gt;
 private static MultiThreadedHttpConnectionManager connectionManager = new MultiThreadedHttpConnectionManager();

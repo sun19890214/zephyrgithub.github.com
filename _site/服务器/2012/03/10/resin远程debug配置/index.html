@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>nginx使用问题</title>
+    <title>resin远程debug配置</title>
     <meta name="author" content="Kevin Sornberger"/>
     <link rel="stylesheet" href="/assets/themes/creatively/css/styles.css"/>
 </head>
@@ -23,8 +23,10 @@
 
         <div id="archive">
             <div><a href="/archive.html">存档</a></div>
-            <div style="padding-bottom: 16px;"></div>
+            <div style="padding-bottom: 6px;"></div>
             <div><a href="/categories.html">分类</a></div>
+            <div style="padding-bottom: 6px;"></div>
+            <div><a href="/tags.html">Tag</a></div>
         </div>
 
         <div id="icons">
@@ -54,14 +56,17 @@
 <div class="content">
   <div id="post">
     <h1>
-        <a href="/2012/03/10/nginx%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98">nginx使用问题</a>
+        <a href="/%E6%9C%8D%E5%8A%A1%E5%99%A8/2012/03/10/resin%E8%BF%9C%E7%A8%8Bdebug%E9%85%8D%E7%BD%AE">resin远程debug配置</a>
     </h1>
 
     <div class="authoring">
         March 10, 2012
     </div>
 
-    <p>1、更改nginx配置增加ssl，-s reload无效，使用killall后重启生效</p>
+    <p>修改/resin/conf/resin.conf 追加 <div><p><code>
+ jvm-arg  -Xdebug  /jvm-arg
+ jvm-arg  -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=9090  /jvm-arg
+</code></p></div></p>
   </div>
 
 

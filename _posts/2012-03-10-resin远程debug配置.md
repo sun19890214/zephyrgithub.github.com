@@ -2,8 +2,8 @@
 layout: post
 title: "resin远程debug配置"
 description: ""
-category:
-tags: []
+category: 服务器
+tags: resin 配置
 ---
 {% include JB/setup %}
  修改/resin/conf/resin.conf
