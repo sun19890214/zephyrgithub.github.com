@@ -4,7 +4,7 @@
  <title>海贼的少年 Blog</title>
  <link href="http://zephyrgithub.github.com/atom.xml" rel="self"/>
  <link href="http://zephyrgithub.github.com"/>
- <updated>2013-02-05T21:50:05+08:00</updated>
+ <updated>2013-02-21T16:03:09+08:00</updated>
  <id>http://zephyrgithub.github.com</id>
  <author>
    <name>海贼的少年</name>
@@ -50,7 +50,7 @@ netstat -an |grep 2245
 lsof -i:8080
 &lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
 
-&lt;h20&gt;日志&lt;/h20&gt;
+&lt;h20&gt;日志分析&lt;/h20&gt;
 
 &lt;p&gt;查看日志的前、后n行：&lt;/p&gt;
 &lt;div&gt;&lt;p&gt;&lt;code&gt;
@@ -78,6 +78,18 @@ cat key.log |sort |uniq -c|sort -n
 &lt;p&gt;查看有哪些用户： &lt;div&gt;&lt;p&gt;&lt;code&gt;
 cat /etc/passwd |awk -F: '{print $1}'
 &lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>输出十万以内的素数</title>
+   <link href="http://zephyrgithub.github.com/2012/12/26/%E8%BE%93%E5%87%BA%E5%8D%81%E4%B8%87%E4%BB%A5%E5%86%85%E7%9A%84%E7%B4%A0%E6%95%B0"/>
+   <updated>2012-12-26T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/2012/12/26/输出十万以内的素数</id>
+   <content type="html">&lt;p&gt;让当场写一段代码输出十万以内的素数，我竟然还问人家什么是素数&amp;#8230; 写的有点问题，最讨厌在纸上写了(~﹏~)&lt;/p&gt;
+
+&lt;p&gt;回去重写了一下&lt;/p&gt;
+
+&lt;p&gt;https://github.com/zephyrGithub/code-segment/blob/master/src/com/github/codesegment/alg/Prime.java&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -217,15 +229,15 @@ org.apache.amber:amber-oauth2-authzserver:jar:0.31-incubating-SNAPSHOT (compile)
  </entry>
  
  <entry>
-   <title>IDEA使用配置</title>
-   <link href="http://zephyrgithub.github.com/%E5%B7%A5%E5%85%B7/2012/03/10/IDEA%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE"/>
+   <title>IDEA使用问题</title>
+   <link href="http://zephyrgithub.github.com/%E5%B7%A5%E5%85%B7/2012/03/10/IDEA%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98"/>
    <updated>2012-03-10T00:00:00+08:00</updated>
-   <id>http://zephyrgithub.github.com/%E5%B7%A5%E5%85%B7/2012/03/10/IDEA使用配置</id>
-   <content type="html">&lt;p&gt;Q：IDEA运行main方法之前不重新编译java文件&lt;/p&gt;
+   <id>http://zephyrgithub.github.com/%E5%B7%A5%E5%85%B7/2012/03/10/IDEA使用问题</id>
+   <content type="html">&lt;p&gt;Q：IDEA运行main方法时不重新编译java文件&lt;/p&gt;
 
 &lt;p&gt;A：在设置中的before launch 一定要勾选去掉make 去掉make 魂淡啊~&lt;/p&gt;
 
-&lt;p&gt;ps：设置maven的jvm你内存 &lt;div&gt;&lt;p&gt;&lt;code&gt;
+&lt;p&gt;ps：设置maven的jvm内存 &lt;div&gt;&lt;p&gt;&lt;code&gt;
 MAVEN_OPTS=-Xms512m -Xmx512m
 &lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;</content>
  </entry>
