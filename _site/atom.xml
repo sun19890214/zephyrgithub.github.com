@@ -4,13 +4,29 @@
  <title>海贼的少年 Blog</title>
  <link href="http://zephyrgithub.github.com/atom.xml" rel="self"/>
  <link href="http://zephyrgithub.github.com"/>
- <updated>2013-02-21T16:03:09+08:00</updated>
+ <updated>2013-02-25T17:57:06+08:00</updated>
  <id>http://zephyrgithub.github.com</id>
  <author>
    <name>海贼的少年</name>
    <email>chenxiaojian@msn.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Object对象hashCode和equals方法的意义</title>
+   <link href="http://zephyrgithub.github.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/2013/02/25/Object%E5%AF%B9%E8%B1%A1hashCode%E5%92%8Cequals%E6%96%B9%E6%B3%95%E7%9A%84%E6%84%8F%E4%B9%89"/>
+   <updated>2013-02-25T00:00:00+08:00</updated>
+   <id>http://zephyrgithub.github.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/2013/02/25/Object对象hashCode和equals方法的意义</id>
+   <content type="html">&lt;p&gt;用于hashMap确定某Key-Value对的存储位置&lt;/p&gt;
+
+&lt;p&gt;key.hashCode()用于确定放置在table数组中的哪一个位置上（这个位置其实是一个链表）&lt;/p&gt;
+
+&lt;p&gt;key.equals()用于在相同位置（同一链表）上找到正确的key&lt;/p&gt;
+&lt;img src='/assets/themes/creatively/images/hashmap.jpg' /&gt;
+&lt;p&gt;注意：对象用作key时最好注意是否需要重写hashCode和equals方法&lt;/p&gt;
+
+&lt;p&gt;尽量不要遍历map，人家不是干这个的&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>运维常用linux命令</title>

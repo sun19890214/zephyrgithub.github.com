@@ -1,0 +1,89 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Sctict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Object对象hashCode和equals方法的意义</title>
+    <meta name="author" content="Kevin Sornberger"/>
+    <link rel="stylesheet" href="/assets/themes/creatively/css/styles.css"/>
+</head>
+
+<body>
+<div id="container">
+    <div id="header">
+        <div id="me">
+            <a href="/" class="first-name">海贼的少年</a>
+            <!--<a href="/" class="last-name">Bighi</a>-->
+        </div>
+
+        <div id="mousing">&nbsp;</div>
+        <div class="site"></div>
+
+
+        <div id="archive">
+            <div><a href="/archive.html">存档</a></div>
+            <div style="padding-bottom: 6px;"></div>
+            <div><a href="/categories.html">分类</a></div>
+            <div style="padding-bottom: 6px;"></div>
+            <div><a href="/tags.html">Tag</a></div>
+        </div>
+
+        <div id="icons">
+            <div class="side-rss">
+                <a href="/atom.xml"><img src="/assets/themes/creatively/images/rss.png"></a>
+            </div>
+
+            <div class="side-github">
+                <a href="http://www.github.com/zephyrGithub"><img src="/assets/themes/creatively/images/icon_github.png"/></a>
+            </div>
+
+            <div class="side-twitter">
+                <a href="http://www.weibo.com/niubijian"><img src="/assets/themes/creatively/images/icon_weibo.png"/></a>
+            </div>
+        </div>
+
+        <div id="sections">
+            <div><a href="/about.html">About</a></div>
+        </div>
+    </div>
+
+    <div id="body-header">
+        <p></p>
+    </div>
+
+    
+<div class="content">
+  <div id="post">
+    <h1>
+        <a href="/%E6%9C%8D%E5%8A%A1%E5%99%A8/2013/02/25/Object%E5%AF%B9%E8%B1%A1hashCode%E5%92%8Cequals%E6%96%B9%E6%B3%95%E7%9A%84%E6%84%8F%E4%B9%89">Object对象hashCode和equals方法的意义</a>
+    </h1>
+
+    <div class="authoring">
+        February 25, 2013
+    </div>
+
+    <p>用于hashMap确定某Key-Value对的存储位置</p>
+
+<p>key.hashCode()用于确定放置在table数组中的哪一个位置上（这个位置其实是一个链表）</p>
+
+<p>key.equals()用于在相同位置（同一链表）上找到正确的key</p>
+<img src='/assets/themes/creatively/images/hashmap.jpg' />
+<p>注意：对象用作key时最好注意是否需要重写hashCode和equals方法</p>
+
+<p>尽量不要遍历map，人家不是干这个的</p>
+  </div>
+
+
+
+
+  
+
+
+
+
+
+</div>
+</body>
+</html>
+
